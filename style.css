@@ -73,7 +73,7 @@ body {
 .main-structure header .menu-logo {
 	width: var(--header-toggle-width);
 	height: var(--header-toggle-width);
-	background: url('/src/icons/menu-4-line.svg');
+	background: url('/src/icons/menu.svg');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: var(--header-toggle-width);
@@ -84,6 +84,13 @@ body {
 	border: 3px solid black;
 	border-radius: 50%;
 	animation: menu_logo ease-in 1s infinite;
+}
+
+.main-structure header .menu-logo.active {
+	background: url('/src/icons/close.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: var(--header-toggle-width);
 }
 
 .main-structure header a {
@@ -255,7 +262,8 @@ body {
 }
 
 @keyframes menu_logo {
-	from, to {
+	from,
+	to {
 		filter: invert(1);
 		transform: scale(1);
 	}
