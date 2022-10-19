@@ -177,6 +177,25 @@ body {
 	margin: 0;
 }
 
+.main-structure .content .video-overlay {
+	mix-blend-mode: overlay;
+}
+.main-structure .content .video-overlay-island {
+	background-color: var(--video-overlay-island-color);
+}
+.main-structure .content .video-overlay-spring {
+	background-color: var(--video-overlay-spring-color);
+}
+.main-structure .content .video-overlay-summer {
+	background-color: var(--video-overlay-summer-color);
+}
+.main-structure .content .video-overlay-autumn {
+	background-color: var(--video-overlay-autumn-color);
+}
+.main-structure .content .video-overlay-winter {
+	background-color: var(--video-overlay-winter-color);
+}
+
 .main-structure .content video.active {
 	clip-path: ellipse(170% 70% at 0% 50%);
 }
@@ -311,6 +330,11 @@ body {
 			-1px -1px 8px rgba(255, 255, 255, 0.1);
 		transition: 0.3s;
 	} */
+
+	.main-structure.active {
+		transform: perspective(5000px) translateX(0px) translateY(0) translateZ(0)
+			rotateX(0deg) rotateY(30deg) rotateZ(0deg);
+	}
 }
 
 @keyframes menu_logo {
