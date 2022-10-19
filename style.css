@@ -63,11 +63,35 @@ body {
 }
 
 .main-structure {
+	position: relative;
+	max-width: var(--main-desktop-max-width);
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 1;
+	transition: 0.5s;
+	transform: perspective(5000px) translateX(0px) translateY(0) translateZ(0)
+		rotateX(0deg) rotateY(0) rotateZ(0deg);
+}
+
+.main-structure.active {
+	width: calc(100% - var(--menu-width) - var(--main-structure-left));
+	height: calc(100vh - 2 * var(--main-structure-left));
+	top: var(--main-structure-left);
+	right: var(--menu-width);
+	left: var(--main-structure-left);
+	bottom: var(--main-structure-left);
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	transform: perspective(5000px) translateX(0px) translateY(0) translateZ(0)
+		rotateX(0deg) rotateY(20deg) rotateZ(0deg);
 }
 
 .main-structure header .menu-logo {
