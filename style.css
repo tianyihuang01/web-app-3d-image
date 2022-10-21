@@ -12,8 +12,8 @@
 	--footer-margin-right: 30px;
 	--footer-icon-width: 30px;
 	--footer-pad-icon-width: calc(var(--footer-icon-width) * 5 / 6);
-	--screen-desktop-padding-top-bottom: 50px;
-	--screen-desktop-padding-left-right: 100px;
+	--screen-desktop-padding-top-bottom: 15px;
+	--screen-desktop-padding-left-right: 60px;
 	--screen-pad-padding-top-bottom: 10px;
 	--screen-pad-padding-left-right: 30px;
 	--video-overlay-island-color: #054f7199;
@@ -22,11 +22,11 @@
 	--video-overlay-autumn-color: #054f713a;
 	--video-overlay-winter-color: #054f7185;
 	--main-structure-max-width: 1920px;
-	--text-description-h1-desktop-size: 3em;
-	--text-description-h2-desktop-size: 2.5em;
+	--text-description-h1-desktop-size: 2em;
+	--text-description-h2-desktop-size: 1.5em;
 	--text-description-p-desktop-size: 1rem;
-	--text-description-h1-pad-size: 2.5em;
-	--text-description-h2-pad-size: 2em;
+	--text-description-h1-pad-size: 1.5em;
+	--text-description-h2-pad-size: 1em;
 	--text-description-p-pad-size: 1rem;
 	--menu-width: 10em;
 	--main-structure-left: 2em;
@@ -139,6 +139,17 @@ body {
 	padding: var(--screen-desktop-padding-top-bottom)
 		var(--screen-desktop-padding-left-right);
 	transition: 0.5s;
+}
+
+.main-structure header {
+	padding-bottom: 0;
+}
+.main-structure .content {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.main-structure footer {
+	padding-top: 0;
 }
 
 .main-structure footer {
